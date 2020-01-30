@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="1" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_calendar_date_time_2" type="calendar_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Choice 1" label="What needed" mandatory="true" max_length="40" name="u_choice_1" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="HR" label="Request type" mandatory="true" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="HR"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="Facilities"/>
+                <element inactive_on_update="false" label="Choice Your Choice" sequence="2" value="choice your choice"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_3" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="calendar_date_time"/>
+    </element>
+</database>
